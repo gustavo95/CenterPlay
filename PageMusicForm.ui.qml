@@ -44,7 +44,7 @@ Item {
             Image {
                 id: image1
                 anchors.fill: parent
-                source: "file:img/spotify.png"
+                source: applicationDirPath + "img/spotify.png"
             }
         }
 
@@ -69,7 +69,7 @@ Item {
             Image {
                 id: image2
                 anchors.fill: parent
-                source: "file:img/music_icon.png"
+                source: applicationDirPath + "img/music_icon.png"
             }
         }
 
@@ -94,7 +94,7 @@ Item {
             Image {
                 id: image3
                 anchors.fill: parent
-                source: "file:img/usb_indigo.png"
+                source: applicationDirPath + "img/usb_indigo.png"
             }
         }
     }

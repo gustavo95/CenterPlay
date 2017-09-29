@@ -45,7 +45,7 @@ Item {
             Image {
                 id: image1
                 anchors.fill: parent
-                source: "file:img/fo.png"
+                source: applicationDirPath + "img/fo.png"
             }
         }
 
@@ -70,7 +70,7 @@ Item {
             Image {
                 id: image2
                 anchors.fill: parent
-                source: "file:img/bf4.png"
+                source: applicationDirPath + "img/bf4.png"
             }
         }
 
@@ -95,7 +95,7 @@ Item {
             Image {
                 id: image3
                 anchors.fill: parent
-                source: "file:img/sonic.png"
+                source: applicationDirPath + "img/sonic.png"
             }
         }
 
@@ -120,7 +120,7 @@ Item {
             Image {
                 id: image
                 anchors.fill: parent
-                source: "file:img/saw.ico"
+                source: applicationDirPath + "img/saw.ico"
             }
         }
     }

@@ -46,7 +46,7 @@ Item {
             Image {
                 id: image1
                 anchors.fill: parent
-                source: "file:img/video_icon.png"
+                source: applicationDirPath + "img/video_icon.png"
             }
         }
 
@@ -71,7 +71,7 @@ Item {
             Image {
                 id: image2
                 anchors.fill: parent
-                source: "file:img/music_icon.png"
+                source: applicationDirPath + "img/music_icon.png"
             }
         }
 
@@ -96,7 +96,7 @@ Item {
             Image {
                 id: image3
                 anchors.fill: parent
-                source: "file:img/image_icon.png"
+                source: applicationDirPath + "img/image_icon.png"
             }
         }
 
@@ -121,7 +121,7 @@ Item {
             Image {
                 id: image4
                 anchors.fill: parent
-                source: "file:img/game_icon.png"
+                source: applicationDirPath + "img/game_icon.png"
             }
         }
     }
@@ -154,7 +154,7 @@ Item {
         Image {
             id: image
             anchors.fill: parent
-            source: "file:img/power_icon.png"
+            source: applicationDirPath + "img/power_icon.png"
         }
     }
 }

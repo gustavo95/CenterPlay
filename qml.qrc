@@ -1,0 +1,15 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>PageMain.qml</file>
+        <file>PageMainForm.ui.qml</file>
+        <file>PageVideo.qml</file>
+        <file>PageVideoForm.ui.qml</file>
+        <file>PageMusic.qml</file>
+        <file>PageMusicForm.ui.qml</file>
+        <file>PagePicture.qml</file>
+        <file>PagePictureForm.ui.qml</file>
+        <file>PageGame.qml</file>
+        <file>PageGameForm.ui.qml</file>
+    </qresource>
+</RCC>

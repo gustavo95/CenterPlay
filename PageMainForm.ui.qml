@@ -46,7 +46,8 @@ Item {
             Image {
                 id: image1
                 anchors.fill: parent
-                source: applicationDirPath + "img/video_icon.png"
+                source: applicationDirPath + "img/film-2-32.png"
+                //source: applicationDirPath + "img/video_icon.png"
             }
         }
 
@@ -71,7 +72,8 @@ Item {
             Image {
                 id: image2
                 anchors.fill: parent
-                source: applicationDirPath + "img/music_icon.png"
+                source: applicationDirPath + "img/film-2-48.png"
+                //source: applicationDirPath + "img/music_icon.png"
             }
         }
 
@@ -96,7 +98,8 @@ Item {
             Image {
                 id: image3
                 anchors.fill: parent
-                source: applicationDirPath + "img/image_icon.png"
+                source: applicationDirPath + "img/film-2-64.png"
+                //source: applicationDirPath + "img/image_icon.png"
             }
         }
 
@@ -121,7 +124,8 @@ Item {
             Image {
                 id: image4
                 anchors.fill: parent
-                source: applicationDirPath + "img/game_icon.png"
+                source: applicationDirPath + "img/film-2-128.png"
+                //source: applicationDirPath + "img/game_icon.png"
             }
         }
     }

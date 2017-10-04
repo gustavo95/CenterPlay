@@ -46,8 +46,7 @@ Item {
             Image {
                 id: image1
                 anchors.fill: parent
-                source: applicationDirPath + "img/film-2-32.png"
-                //source: applicationDirPath + "img/video_icon.png"
+                source: "img/video_icon.png"
             }
         }
 
@@ -72,7 +71,7 @@ Item {
             Image {
                 id: image2
                 anchors.fill: parent
-                source: applicationDirPath + "img/film-2-48.png"
+                source: "img/film-2-48.png"
                 //source: applicationDirPath + "img/music_icon.png"
             }
         }
@@ -98,7 +97,7 @@ Item {
             Image {
                 id: image3
                 anchors.fill: parent
-                source: applicationDirPath + "img/film-2-64.png"
+                source: "img/film-2-64.png"
                 //source: applicationDirPath + "img/image_icon.png"
             }
         }
@@ -124,7 +123,7 @@ Item {
             Image {
                 id: image4
                 anchors.fill: parent
-                source: applicationDirPath + "img/film-2-128.png"
+                source: "img/film-2-128.png"
                 //source: applicationDirPath + "img/game_icon.png"
             }
         }
@@ -158,7 +157,7 @@ Item {
         Image {
             id: image
             anchors.fill: parent
-            source: applicationDirPath + "img/power_icon.png"
+            source: "img/power_icon.png"
         }
     }
 }

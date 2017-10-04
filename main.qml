@@ -4,8 +4,8 @@ import QtQuick.Layouts 1.0
 
 ApplicationWindow {
     visible: true
-    width: 1920
-    height: 1080
+    width: resWidth
+    height: resHeight
     title: qsTr("Center Play")
 
     SwipeView {

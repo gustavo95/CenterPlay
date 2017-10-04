@@ -10,8 +10,8 @@ Item {
     property alias button4: button4
     property alias buttonPower: buttonPower
     property alias text1: text1
-    width: 1920
-    height: 1080
+    width: resWidth
+    height: resHeight
 
     property double spacing_size: 50 * (root.width > 720 ? root.width / 720 : 3 * root.width / 1920)
     property double icon_size: 50 + 125 * root.width / 1920

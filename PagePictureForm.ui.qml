@@ -6,8 +6,8 @@ Item {
     id: root
     property alias button1: button1
     property alias text1: text1
-    width: 1920
-    height: 1080
+    width: resWidth
+    height: resHeight
 
     property double icon_size: 50 + 125 * root.width / 1920
 

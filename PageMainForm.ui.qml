@@ -34,8 +34,8 @@ Item {
             Layout.fillWidth: false
 
             background: Rectangle {
-                implicitWidth: icon_size/3
-                implicitHeight: icon_size/3
+                implicitWidth: icon_size
+                implicitHeight: icon_size
                 opacity: enabled ? 1 : 0.3
                 border.color: button1.focus ? "#59f" : "#fff"
                 color: button1.pressed ? "#cef" : "#fff"
@@ -52,15 +52,15 @@ Item {
 
         Button {
             id: button2
-            width: 50
-            height: 50
+            width: icon_size
+            height: icon_size
             text: qsTr("")
             Layout.fillHeight: false
             Layout.fillWidth: false
 
             background: Rectangle {
-                implicitWidth: 50
-                implicitHeight: 50
+                implicitWidth: icon_size
+                implicitHeight: icon_size
                 opacity: enabled ? 1 : 0.3
                 border.color: button2.focus ? "#627" : "#fff"
                 color: button2.pressed ? "#edf" : "#fff"
@@ -71,8 +71,7 @@ Item {
             Image {
                 id: image2
                 anchors.fill: parent
-                source: "img/film-2-48.png"
-                //source: applicationDirPath + "img/music_icon.png"
+                source: "img/music_icon.png"
             }
         }
 
@@ -97,8 +96,7 @@ Item {
             Image {
                 id: image3
                 anchors.fill: parent
-                source: "img/film-2-64.png"
-                //source: applicationDirPath + "img/image_icon.png"
+                source: "img/image_icon.png"
             }
         }
 
@@ -123,8 +121,7 @@ Item {
             Image {
                 id: image4
                 anchors.fill: parent
-                source: "img/film-2-128.png"
-                //source: applicationDirPath + "img/game_icon.png"
+                source: "img/game_icon.png"
             }
         }
     }
@@ -161,12 +158,4 @@ Item {
         }
     }
 
-    Image {
-        id: image5
-        x: 57
-        y: 44
-        width: 100
-        height: 100
-        source: "qrc:/img/sonic.png"
-    }
 }

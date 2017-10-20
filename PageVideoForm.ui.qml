@@ -31,16 +31,6 @@ Item {
             Layout.fillHeight: false
             Layout.fillWidth: false
 
-            background: Rectangle {
-                implicitWidth: icon_size
-                implicitHeight: icon_size
-                opacity: enabled ? 1 : 0.3
-                border.color: button1.focus ? "#59f" : "#fff"
-                color: button1.pressed ? "#cef" : "#fff"
-                border.width: 2
-                radius: 2
-            }
-
             Image {
                 id: image1
                 anchors.fill: parent

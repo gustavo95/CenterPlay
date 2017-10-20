@@ -167,6 +167,6 @@ Item {
         y: 44
         width: 100
         height: 100
-        source: "img/sonic.png"
+        source: "qrc:/img/sonic.png"
     }
 }

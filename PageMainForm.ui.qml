@@ -160,4 +160,13 @@ Item {
             source: "img/power_icon.png"
         }
     }
+
+    Image {
+        id: image5
+        x: 57
+        y: 44
+        width: 100
+        height: 100
+        source: "img/sonic.png"
+    }
 }

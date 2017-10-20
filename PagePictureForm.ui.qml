@@ -40,7 +40,7 @@ Item {
             Image {
                 id: image1
                 anchors.fill: parent
-                source: applicationDirPath + "img/usb_orange.png"
+                source: "img/usb_orange.png"
             }
         }
     }

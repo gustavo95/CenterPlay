@@ -44,7 +44,7 @@ Item {
             Image {
                 id: image1
                 anchors.fill: parent
-                source: applicationDirPath + "img/netflix.png"
+                source: "img/netflix.png"
             }
         }
 
@@ -69,7 +69,7 @@ Item {
             Image {
                 id: image2
                 anchors.fill: parent
-                source: applicationDirPath + "img/music_icon.png"
+                source: "img/music_icon.png"
             }
         }
 
@@ -94,7 +94,7 @@ Item {
             Image {
                 id: image3
                 anchors.fill: parent
-                source: applicationDirPath + "img/usb_blue.png"
+                source: "img/usb_blue.png"
             }
         }
     }

@@ -27,15 +27,15 @@ Item {
 
         Button {
             id: button1
-            width: icon_size
-            height: icon_size
+            width: icon_size/3
+            height: icon_size/3
             text: qsTr("")
             Layout.fillHeight: false
             Layout.fillWidth: false
 
             background: Rectangle {
-                implicitWidth: icon_size
-                implicitHeight: icon_size
+                implicitWidth: icon_size/3
+                implicitHeight: icon_size/3
                 opacity: enabled ? 1 : 0.3
                 border.color: button1.focus ? "#59f" : "#fff"
                 color: button1.pressed ? "#cef" : "#fff"
@@ -52,15 +52,15 @@ Item {
 
         Button {
             id: button2
-            width: icon_size
-            height: icon_size
+            width: 50
+            height: 50
             text: qsTr("")
             Layout.fillHeight: false
             Layout.fillWidth: false
 
             background: Rectangle {
-                implicitWidth: icon_size
-                implicitHeight: icon_size
+                implicitWidth: 50
+                implicitHeight: 50
                 opacity: enabled ? 1 : 0.3
                 border.color: button2.focus ? "#627" : "#fff"
                 color: button2.pressed ? "#edf" : "#fff"

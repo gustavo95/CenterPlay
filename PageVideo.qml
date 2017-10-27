@@ -24,6 +24,4 @@ PageVideoForm {
             textDate.text = Qt.formatDateTime(new Date(), "hh:mm dd/MM/yyyy")
         }
     }
-    Keys.onLeftPressed: swipeView.currentIndex = 0
-    Keys.onRightPressed: swipeView.currentIndex = 2
 }

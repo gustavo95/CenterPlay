@@ -23,17 +23,18 @@ ApplicationWindow {
         id: gamepadKeyNavigation
         gamepad: gamepad1
         active: true
-        buttonAKey: Qt.Key_A
-        buttonBKey: Qt.Key_B
-        buttonXKey: Qt.Key_X
-        buttonYKey: Qt.Key_Y
-        buttonL1Key: Qt.Key_L
-        buttonR1Key: Qt.Key_R
+        buttonAKey: Qt.Key_A //X
+        buttonBKey: Qt.Key_B //O
+        buttonXKey: Qt.Key_X //Triangulo
+        buttonYKey: Qt.Key_Y //Quadrado
+        buttonL1Key: Qt.Key_L //L1
+        buttonR1Key: Qt.Key_R //R1
     }
 
     SwipeView {
         id: swipeView
         anchors.fill: parent
+        interactive: false
         currentIndex: 0
 
         PageMain {
@@ -68,6 +69,14 @@ ApplicationWindow {
                 if(swipeView.currentIndex < 0){
                     swipeView.currentIndex = 0;
                 }
+            }
+            else if (event.key === Qt.Key_Right) {
+                if(swipeView.currentIndex == 0){
+                    PageMain.focus = true;
+                }
+            }
+            else if (event.key === Qt.Key_Left) {
+
             }
         }
     }

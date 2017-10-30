@@ -4,7 +4,6 @@ PageMainForm {
     Loader {
         id: pageLoader
     }
-
     button1.onClicked: {
         swipeView.currentIndex = 1
     }

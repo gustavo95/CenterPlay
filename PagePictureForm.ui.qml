@@ -21,6 +21,9 @@ Item {
 
         Button {
             id: button1
+            focus: true
+            KeyNavigation.left: button1
+            KeyNavigation.right: button1
             width: icon_size
             height: icon_size
             text: qsTr("")

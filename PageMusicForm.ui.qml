@@ -25,6 +25,9 @@ Item {
 
         Button {
             id: button1
+            focus: true
+            KeyNavigation.left: button1
+            KeyNavigation.right: button2
             width: icon_size
             height: icon_size
             text: qsTr("")
@@ -50,6 +53,8 @@ Item {
 
         Button {
             id: button2
+            KeyNavigation.left: button1
+            KeyNavigation.right: button3
             width: icon_size
             height: icon_size
             text: qsTr("")
@@ -75,6 +80,8 @@ Item {
 
         Button {
             id: button3
+            KeyNavigation.left: button2
+            KeyNavigation.right: button3
             width: icon_size
             height: icon_size
             text: qsTr("")

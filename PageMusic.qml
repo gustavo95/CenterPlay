@@ -2,13 +2,13 @@ import QtQuick 2.0
 
 PageMusicForm {
     button1.onClicked: {
-        console.log("Button \"Video\" clicked.");
+        console.log("Button \"Music1\" clicked.");
     }
     button2.onClicked: {
-        console.log("Button \"Music\" clicked.");
+        console.log("Button \"Music2\" clicked.");
     }
     button3.onClicked: {
-        console.log("Button \"Image\" clicked.");
+        console.log("Button \"Music3\" clicked.");
     }
     text1 {
         id: textDate

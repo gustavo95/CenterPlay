@@ -2,7 +2,7 @@ import QtQuick 2.4
 
 PagePictureForm {
     button1.onClicked: {
-        console.log("Button \"Video\" clicked.");
+        console.log("Button \"Image\" clicked.");
     }
     text1 {
         id: textDate

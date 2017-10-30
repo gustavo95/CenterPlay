@@ -27,8 +27,12 @@ Item {
 
         Button {
             id: button1
-            width: icon_size/3
-            height: icon_size/3
+            focus: true
+            KeyNavigation.left: button1
+            KeyNavigation.right: button2
+            KeyNavigation.down: buttonPower
+            width: icon_size / 3
+            height: icon_size / 3
             text: qsTr("")
             Layout.fillHeight: false
             Layout.fillWidth: false
@@ -45,6 +49,7 @@ Item {
 
             Image {
                 id: image1
+                enabled: true
                 anchors.fill: parent
                 source: "img/video_icon.png"
             }
@@ -52,6 +57,9 @@ Item {
 
         Button {
             id: button2
+            KeyNavigation.left: button1
+            KeyNavigation.right: button3
+            KeyNavigation.down: buttonPower
             width: icon_size
             height: icon_size
             text: qsTr("")
@@ -77,6 +85,9 @@ Item {
 
         Button {
             id: button3
+            KeyNavigation.left: button2
+            KeyNavigation.right: button4
+            KeyNavigation.down: buttonPower
             width: icon_size
             height: icon_size
             text: qsTr("")
@@ -102,6 +113,9 @@ Item {
 
         Button {
             id: button4
+            KeyNavigation.left: button3
+            KeyNavigation.right: button4
+            KeyNavigation.down: buttonPower
             width: icon_size
             height: icon_size
             text: ""
@@ -137,6 +151,7 @@ Item {
 
     Button {
         id: buttonPower
+        KeyNavigation.up: button1
         x: root.width * 9 / 10
         y: root.height / 2 - buttonPower.height / 2 + 10 + 200 * root.width / root.height
         text: qsTr("")
@@ -157,5 +172,4 @@ Item {
             source: "img/power_icon.png"
         }
     }
-
 }

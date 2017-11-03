@@ -23,87 +23,125 @@ Item {
         spacing: spacing_size
         opacity: 1
 
-        Button {
-            id: button1
-            focus: true
-            KeyNavigation.left: button1
-            KeyNavigation.right: button2
-            width: icon_size
-            height: icon_size
-            text: qsTr("")
-            Layout.fillHeight: false
-            Layout.fillWidth: false
+        ColumnLayout {
+            id: columnLayout1
 
-            background: Rectangle {
-                implicitWidth: icon_size
-                implicitHeight: icon_size
-                opacity: enabled ? 1 : 0.3
-                border.color: button1.focus ? "#627" : "#fff"
-                color: button1.pressed ? "#edf" : "#fff"
-                border.width: 2
-                radius: 2
+            Button {
+                id: button1
+                KeyNavigation.left: button1
+                KeyNavigation.right: button2
+                width: icon_size
+                height: icon_size
+                text: qsTr("")
+                Layout.fillHeight: false
+                Layout.fillWidth: false
+
+                background: Rectangle {
+                    implicitWidth: icon_size
+                    implicitHeight: icon_size
+                    opacity: enabled ? 1 : 0.3
+                    border.color: button1.focus ? "#2d6" : "#fff"
+                    color: button1.pressed ? "#bfa" : "#fff"
+                    border.width: 2
+                    radius: 2
+                }
+
+                Image {
+                    id: image1
+                    anchors.fill: parent
+                    source: "img/spotify.png"
+                }
             }
 
-            Image {
-                id: image1
-                anchors.fill: parent
-                source: "img/spotify.png"
-            }
-        }
-
-        Button {
-            id: button2
-            KeyNavigation.left: button1
-            KeyNavigation.right: button3
-            width: icon_size
-            height: icon_size
-            text: qsTr("")
-            Layout.fillHeight: false
-            Layout.fillWidth: false
-
-            background: Rectangle {
-                implicitWidth: icon_size
-                implicitHeight: icon_size
-                opacity: enabled ? 1 : 0.3
-                border.color: button2.focus ? "#627" : "#fff"
-                color: button2.pressed ? "#edf" : "#fff"
-                border.width: 2
-                radius: 2
-            }
-
-            Image {
-                id: image2
-                anchors.fill: parent
-                source: "img/music_icon.png"
+            Text {
+                id: button1Text
+                text: button1.focus ? qsTr("Spotify") : qsTr("")
+                font.pixelSize: fontSize * root.width / root.height
             }
         }
 
-        Button {
-            id: button3
-            KeyNavigation.left: button2
-            KeyNavigation.right: button3
-            width: icon_size
-            height: icon_size
-            text: qsTr("")
-            Layout.fillHeight: false
-            Layout.fillWidth: false
+        ColumnLayout {
+            id: columnLayout2
 
-            background: Rectangle {
-                implicitWidth: icon_size
-                implicitHeight: icon_size
-                opacity: enabled ? 1 : 0.3
-                border.color: button3.focus ? "#627" : "#fff"
-                color: button3.pressed ? "#edf" : "#fff"
-                border.width: 2
-                radius: 2
+            Button {
+                id: button2
+                KeyNavigation.left: button1
+                KeyNavigation.right: button3
+                width: icon_size
+                height: icon_size
+                text: qsTr("")
+                Layout.fillHeight: false
+                Layout.fillWidth: false
+
+                background: Rectangle {
+                    implicitWidth: icon_size
+                    implicitHeight: icon_size
+                    opacity: enabled ? 1 : 0.3
+                    border.color: button2.focus ? "#2d6" : "#fff"
+                    color: button2.pressed ? "#bfa" : "#fff"
+                    border.width: 2
+                    radius: 2
+                }
+
+                Image {
+                    id: image2
+                    anchors.fill: parent
+                    source: "img/deezer.png"
+                }
             }
 
-            Image {
-                id: image3
-                anchors.fill: parent
-                source: "img/usb_indigo.png"
+            Text {
+                id: button2Text
+                text: button2.focus ? qsTr("Deezer") : qsTr("")
+                font.pixelSize: fontSize * root.width / root.height
             }
         }
+
+        ColumnLayout {
+            id: columnLayout3
+
+            Button {
+                id: button3
+                KeyNavigation.left: button2
+                KeyNavigation.right: button3
+                width: icon_size
+                height: icon_size
+                text: qsTr("")
+                Layout.fillHeight: false
+                Layout.fillWidth: false
+
+                background: Rectangle {
+                    implicitWidth: icon_size
+                    implicitHeight: icon_size
+                    opacity: enabled ? 1 : 0.3
+                    border.color: button3.focus ? "#2d6" : "#fff"
+                    color: button3.pressed ? "#bfa" : "#fff"
+                    border.width: 2
+                    radius: 2
+                }
+
+                Image {
+                    id: image3
+                    anchors.fill: parent
+                    source: "img/usb_green.png"
+                }
+            }
+
+            Text {
+                id: button3Text
+                text: button3.focus ? qsTr("USB") : qsTr("")
+                font.pixelSize: fontSize * root.width / root.height
+            }
+        }
+    }
+
+    Text {
+        id: title
+        x: root.width / 2 - title.width / 2
+        y: 50
+        text: qsTr("Musicas")
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: (fontSize+4) * root.width / root.height
     }
 
     Text {
@@ -112,6 +150,6 @@ Item {
         y: root.height / 2 + 200 * root.width / root.height
         text: qsTr("hh:mm dd/MM/yyyy")
         horizontalAlignment: Text.AlignHCenter
-        font.pixelSize: 10 * root.width / root.height
+        font.pixelSize: fontSize * root.width / root.height
     }
 }

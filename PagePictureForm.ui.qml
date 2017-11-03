@@ -19,33 +19,51 @@ Item {
         height: icon_size
         opacity: 1
 
-        Button {
-            id: button1
-            focus: true
-            KeyNavigation.left: button1
-            KeyNavigation.right: button1
-            width: icon_size
-            height: icon_size
-            text: qsTr("")
-            Layout.fillHeight: false
-            Layout.fillWidth: false
+        ColumnLayout {
+            id: columnLayout1
 
-            background: Rectangle {
-                implicitWidth: icon_size
-                implicitHeight: icon_size
-                opacity: enabled ? 1 : 0.3
-                border.color: button1.focus ? "#fa0" : "#fff"
-                color: button1.pressed ? "#fed" : "#fff"
-                border.width: 2
-                radius: 2
+            Button {
+                id: button1
+                KeyNavigation.left: button1
+                KeyNavigation.right: button1
+                width: icon_size
+                height: icon_size
+                text: qsTr("")
+                Layout.fillHeight: false
+                Layout.fillWidth: false
+
+                background: Rectangle {
+                    implicitWidth: icon_size
+                    implicitHeight: icon_size
+                    opacity: enabled ? 1 : 0.3
+                    border.color: button1.focus ? "#fa0" : "#fff"
+                    color: button1.pressed ? "#fed" : "#fff"
+                    border.width: 2
+                    radius: 2
+                }
+
+                Image {
+                    id: image1
+                    anchors.fill: parent
+                    source: "img/usb_orange.png"
+                }
             }
 
-            Image {
-                id: image1
-                anchors.fill: parent
-                source: "img/usb_orange.png"
+            Text {
+                id: button1Text
+                text: button1.focus ? qsTr("USB") : qsTr("")
+                font.pixelSize: fontSize * root.width / root.height
             }
         }
+    }
+
+    Text {
+        id: title
+        x: root.width / 2 - title.width / 2
+        y: 50
+        text: qsTr("Fotos")
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: (fontSize+4) * root.width / root.height
     }
 
     Text {
@@ -54,6 +72,6 @@ Item {
         y: root.height / 2 + 200 * root.width / root.height
         text: qsTr("hh:mm dd/MM/yyyy")
         horizontalAlignment: Text.AlignHCenter
-        font.pixelSize: 10 * root.width / root.height
+        font.pixelSize: fontSize * root.width / root.height
     }
 }

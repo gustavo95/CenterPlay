@@ -25,119 +25,167 @@ Item {
         spacing: spacing_size
         opacity: 1
 
-        Button {
-            id: button1
-            focus: true
-            KeyNavigation.left: button1
-            KeyNavigation.right: button2
-            KeyNavigation.down: buttonPower
-            width: icon_size / 3
-            height: icon_size / 3
-            text: qsTr("")
-            Layout.fillHeight: false
-            Layout.fillWidth: false
+        ColumnLayout {
+            id: columnLayout1
 
-            background: Rectangle {
-                implicitWidth: icon_size
-                implicitHeight: icon_size
-                opacity: enabled ? 1 : 0.3
-                border.color: button1.focus ? "#59f" : "#fff"
-                color: button1.pressed ? "#cef" : "#fff"
-                border.width: 2
-                radius: 2
+            Button {
+                id: button1
+                focus: true
+                KeyNavigation.left: button1
+                KeyNavigation.right: button2
+                KeyNavigation.down: buttonPower
+                width: icon_size / 3
+                height: icon_size / 3
+                text: qsTr("")
+                Layout.fillHeight: false
+                Layout.fillWidth: false
+
+                background: Rectangle {
+                    implicitWidth: icon_size
+                    implicitHeight: icon_size
+                    opacity: enabled ? 1 : 0.3
+                    border.color: button1.focus ? "#c00" : "#fff"
+                    color: button1.pressed ? "#fdd" : "#fff"
+                    border.width: 2
+                    radius: 2
+                }
+
+                Image {
+                    id: image1
+                    enabled: true
+                    anchors.fill: parent
+                    source: "img/video_icon.png"
+                }
             }
 
-            Image {
-                id: image1
-                enabled: true
-                anchors.fill: parent
-                source: "img/video_icon.png"
-            }
-        }
-
-        Button {
-            id: button2
-            KeyNavigation.left: button1
-            KeyNavigation.right: button3
-            KeyNavigation.down: buttonPower
-            width: icon_size
-            height: icon_size
-            text: qsTr("")
-            Layout.fillHeight: false
-            Layout.fillWidth: false
-
-            background: Rectangle {
-                implicitWidth: icon_size
-                implicitHeight: icon_size
-                opacity: enabled ? 1 : 0.3
-                border.color: button2.focus ? "#627" : "#fff"
-                color: button2.pressed ? "#edf" : "#fff"
-                border.width: 2
-                radius: 2
-            }
-
-            Image {
-                id: image2
-                anchors.fill: parent
-                source: "img/music_icon.png"
+            Text {
+                id: button1Text
+                text: button1.focus ? qsTr("Videos") : qsTr("")
+                font.pixelSize: fontSize * root.width / root.height
             }
         }
 
-        Button {
-            id: button3
-            KeyNavigation.left: button2
-            KeyNavigation.right: button4
-            KeyNavigation.down: buttonPower
-            width: icon_size
-            height: icon_size
-            text: qsTr("")
-            Layout.fillHeight: false
-            Layout.fillWidth: false
+        ColumnLayout {
+            id: columnLayout2
 
-            background: Rectangle {
-                implicitWidth: icon_size
-                implicitHeight: icon_size
-                opacity: enabled ? 1 : 0.3
-                border.color: button3.focus ? "#fa0" : "#fff"
-                color: button3.pressed ? "#fed" : "#fff"
-                border.width: 2
-                radius: 2
+            Button {
+                id: button2
+                KeyNavigation.left: button1
+                KeyNavigation.right: button3
+                KeyNavigation.down: buttonPower
+                width: icon_size
+                height: icon_size
+                text: qsTr("")
+                Layout.fillHeight: false
+                Layout.fillWidth: false
+
+                background: Rectangle {
+                    implicitWidth: icon_size
+                    implicitHeight: icon_size
+                    opacity: enabled ? 1 : 0.3
+                    border.color: button2.focus ? "#2d6" : "#fff"
+                    color: button2.pressed ? "#bfa" : "#fff"
+                    border.width: 2
+                    radius: 2
+                }
+
+                Image {
+                    id: image2
+                    anchors.fill: parent
+                    source: "img/music_icon.png"
+                }
             }
 
-            Image {
-                id: image3
-                anchors.fill: parent
-                source: "img/image_icon.png"
+            Text {
+                id: button2Text
+                text: button2.focus ? qsTr("Musicas") : qsTr("")
+                font.pixelSize: fontSize * root.width / root.height
+            }
+        }
+
+        ColumnLayout {
+            id: columnLayout3
+
+            Button {
+                id: button3
+                KeyNavigation.left: button2
+                KeyNavigation.right: button4
+                KeyNavigation.down: buttonPower
+                width: icon_size
+                height: icon_size
+                text: qsTr("")
+                Layout.fillHeight: false
+                Layout.fillWidth: false
+
+                background: Rectangle {
+                    implicitWidth: icon_size
+                    implicitHeight: icon_size
+                    opacity: enabled ? 1 : 0.3
+                    border.color: button3.focus ? "#fa0" : "#fff"
+                    color: button3.pressed ? "#fed" : "#fff"
+                    border.width: 2
+                    radius: 2
+                }
+
+                Image {
+                    id: image3
+                    anchors.fill: parent
+                    source: "img/image_icon.png"
+                }
+            }
+
+            Text {
+                id: button3Text
+                text: button3.focus ? qsTr("Fotos") : qsTr("")
+                font.pixelSize: fontSize * root.width / root.height
             }
         }
 
-        Button {
-            id: button4
-            KeyNavigation.left: button3
-            KeyNavigation.right: button4
-            KeyNavigation.down: buttonPower
-            width: icon_size
-            height: icon_size
-            text: ""
-            Layout.fillHeight: false
-            Layout.fillWidth: false
+        ColumnLayout {
+            id: columnLayout4
 
-            background: Rectangle {
-                implicitWidth: icon_size
-                implicitHeight: icon_size
-                opacity: enabled ? 1 : 0.3
-                border.color: button4.focus ? "#f50" : "#fff"
-                color: button4.pressed ? "#fdc" : "#fff"
-                border.width: 2
-                radius: 2
+            Button {
+                id: button4
+                KeyNavigation.left: button3
+                KeyNavigation.right: button4
+                KeyNavigation.down: buttonPower
+                width: icon_size
+                height: icon_size
+                text: ""
+                Layout.fillHeight: false
+                Layout.fillWidth: false
+
+                background: Rectangle {
+                    implicitWidth: icon_size
+                    implicitHeight: icon_size
+                    opacity: enabled ? 1 : 0.3
+                    border.color: button4.focus ? "#59f" : "#fff"
+                    color: button4.pressed ? "#cef" : "#fff"
+                    border.width: 2
+                    radius: 2
+                }
+
+                Image {
+                    id: image4
+                    anchors.fill: parent
+                    source: "img/game_icon.png"
+                }
             }
-
-            Image {
-                id: image4
-                anchors.fill: parent
-                source: "img/game_icon.png"
+            Text {
+                id: button4Text
+                text: button4.focus ? qsTr("Jogos") : qsTr("")
+                font.pixelSize: fontSize * root.width / root.height
             }
         }
+    }
+
+    Text {
+        id: title
+        x: root.width / 2 - title.width / 2
+        y: 50
+        text: qsTr("Center Play")
+        horizontalAlignment: Text.AlignHCenter
+        font.pixelSize: (fontSize+4) * root.width / root.height
     }
 
     Text {
@@ -146,7 +194,7 @@ Item {
         y: root.height / 2 + 200 * root.width / root.height
         text: qsTr("hh:mm dd/MM/yyyy")
         horizontalAlignment: Text.AlignHCenter
-        font.pixelSize: 10 * root.width / root.height
+        font.pixelSize: fontSize * root.width / root.height
     }
 
     Button {

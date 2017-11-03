@@ -19,7 +19,7 @@ PageMainForm {
     buttonPower.onClicked: {
         scriptLauncher.launchScript()
     }
-    text1 {
+    text1{
         id: textDate
         color: "black"
     }

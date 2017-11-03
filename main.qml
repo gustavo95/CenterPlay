@@ -23,7 +23,7 @@ ApplicationWindow {
         id: gamepadKeyNavigation
         gamepad: gamepad1
         active: true
-        buttonAKey: Qt.Key_A //X
+        buttonAKey: Qt.Key_Space //X
         buttonBKey: Qt.Key_B //O
         buttonXKey: Qt.Key_X //Triangulo
         buttonYKey: Qt.Key_Y //Quadrado
@@ -34,6 +34,7 @@ ApplicationWindow {
     SwipeView {
         id: swipeView
         anchors.fill: parent
+        focus: true
         interactive: false
         currentIndex: 0
 
@@ -70,9 +71,41 @@ ApplicationWindow {
                     swipeView.currentIndex = 0;
                 }
             }
+            else if (event.key === Qt.Key_B) {
+                swipeView.currentIndex = 0;
+            }
             else if (event.key === Qt.Key_Right) {
                 if(swipeView.currentIndex == 0){
-                    PageMain.focus = true;
+                    nextItemInFocusChain().forceActiveFocus();
+                }
+                if(swipeView.currentIndex == 1){
+                    nextItemInFocusChain().nextItemInFocusChain().
+                    nextItemInFocusChain().nextItemInFocusChain().
+                    nextItemInFocusChain().nextItemInFocusChain().forceActiveFocus();
+                }
+                if(swipeView.currentIndex == 2){
+                    nextItemInFocusChain().nextItemInFocusChain().
+                    nextItemInFocusChain().nextItemInFocusChain().
+                    nextItemInFocusChain().nextItemInFocusChain().
+                    nextItemInFocusChain().nextItemInFocusChain().
+                    nextItemInFocusChain().forceActiveFocus();
+                }
+                if(swipeView.currentIndex == 3){
+                    nextItemInFocusChain().nextItemInFocusChain().
+                    nextItemInFocusChain().nextItemInFocusChain().
+                    nextItemInFocusChain().nextItemInFocusChain().
+                    nextItemInFocusChain().nextItemInFocusChain().
+                    nextItemInFocusChain().nextItemInFocusChain().
+                    nextItemInFocusChain().nextItemInFocusChain().forceActiveFocus();
+                }
+                if(swipeView.currentIndex == 4){
+                    nextItemInFocusChain().nextItemInFocusChain().
+                    nextItemInFocusChain().nextItemInFocusChain().
+                    nextItemInFocusChain().nextItemInFocusChain().
+                    nextItemInFocusChain().nextItemInFocusChain().
+                    nextItemInFocusChain().nextItemInFocusChain().
+                    nextItemInFocusChain().nextItemInFocusChain().
+                    nextItemInFocusChain().forceActiveFocus();
                 }
             }
             else if (event.key === Qt.Key_Left) {

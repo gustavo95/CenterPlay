@@ -21,9 +21,12 @@
         <file>img/saw.ico</file>
         <file>img/sonic.png</file>
         <file>img/spotify.png</file>
-        <file>img/usb_blue.png</file>
-        <file>img/usb_indigo.png</file>
         <file>img/usb_orange.png</file>
         <file>img/video_icon.png</file>
+        <file>img/youtube.ico</file>
+        <file>img/deezer.png</file>
+        <file>img/usb_red.png</file>
+        <file>img/usb_green.png</file>
+        <file>img/usb_indigo.png</file>
     </qresource>
 </RCC>

@@ -74,7 +74,7 @@ ApplicationWindow {
             else if (event.key === Qt.Key_B) {
                 swipeView.currentIndex = 0;
             }
-            else if (event.key === Qt.Key_Right) {
+            else if (event.key === Qt.Key_Right || event.key === Qt.Key_Left) {
                 if(swipeView.currentIndex == 0){
                     nextItemInFocusChain().forceActiveFocus();
                 }

@@ -35,7 +35,6 @@ ApplicationWindow {
         id: swipeView
         anchors.fill: parent
         focus: true
-        interactive: false
         currentIndex: 0
 
         PageMain {

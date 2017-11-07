@@ -31,9 +31,8 @@ Item {
             Button {
                 id: button1
                 focus: true
-                KeyNavigation.left: button1
-                KeyNavigation.right: button2
-                KeyNavigation.down: buttonPower
+                KeyNavigation.down: button1
+                KeyNavigation.up: button2
                 width: icon_size / 3
                 height: icon_size / 3
                 text: qsTr("")
@@ -70,9 +69,8 @@ Item {
 
             Button {
                 id: button2
-                KeyNavigation.left: button1
-                KeyNavigation.right: button3
-                KeyNavigation.down: buttonPower
+                KeyNavigation.down: button1
+                KeyNavigation.up: button3
                 width: icon_size
                 height: icon_size
                 text: qsTr("")
@@ -108,9 +106,8 @@ Item {
 
             Button {
                 id: button3
-                KeyNavigation.left: button2
-                KeyNavigation.right: button4
-                KeyNavigation.down: buttonPower
+                KeyNavigation.down: button2
+                KeyNavigation.up: button4
                 width: icon_size
                 height: icon_size
                 text: qsTr("")
@@ -146,9 +143,8 @@ Item {
 
             Button {
                 id: button4
-                KeyNavigation.left: button3
-                KeyNavigation.right: button4
-                KeyNavigation.down: buttonPower
+                KeyNavigation.down: button3
+                KeyNavigation.up: buttonPower
                 width: icon_size
                 height: icon_size
                 text: ""
@@ -199,7 +195,8 @@ Item {
 
     Button {
         id: buttonPower
-        KeyNavigation.up: button1
+        KeyNavigation.down: button4
+        KeyNavigation.up: buttonPower
         x: root.width * 9 / 10
         y: root.height / 2 - buttonPower.height / 2 + 10 + 200 * root.width / root.height
         text: qsTr("")

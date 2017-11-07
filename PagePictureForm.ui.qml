@@ -24,8 +24,8 @@ Item {
 
             Button {
                 id: button1
-                KeyNavigation.left: button1
-                KeyNavigation.right: button1
+                KeyNavigation.down: button1
+                KeyNavigation.up: button1
                 width: icon_size
                 height: icon_size
                 text: qsTr("")

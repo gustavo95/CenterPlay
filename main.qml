@@ -1,5 +1,5 @@
 import QtQuick 2.7
-import QtQuick.Controls 2.1
+import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.0
 import QtGamepad 1.0
 
@@ -29,13 +29,16 @@ ApplicationWindow {
         buttonYKey: Qt.Key_Y //Quadrado
         buttonL1Key: Qt.Key_L //L1
         buttonR1Key: Qt.Key_R //R1
+        rightKey: Qt.Key_Up //->
+        leftKey: Qt.Key_Down //<-
+        upKey: Qt.Key_U
+        downKey: Qt.Key_D
     }
 
     SwipeView {
         id: swipeView
         anchors.fill: parent
         focus: true
-        interactive: false
         currentIndex: 0
 
         PageMain {
@@ -74,7 +77,7 @@ ApplicationWindow {
             else if (event.key === Qt.Key_B) {
                 swipeView.currentIndex = 0;
             }
-            else if (event.key === Qt.Key_Right || event.key === Qt.Key_Left) {
+            else if (event.key === Qt.Key_Up || event.key === Qt.Key_Down) {
                 if(swipeView.currentIndex == 0){
                     nextItemInFocusChain().forceActiveFocus();
                 }
@@ -107,9 +110,6 @@ ApplicationWindow {
                     nextItemInFocusChain().nextItemInFocusChain().
                     nextItemInFocusChain().forceActiveFocus();
                 }
-            }
-            else if (event.key === Qt.Key_Left) {
-
             }
         }
     }

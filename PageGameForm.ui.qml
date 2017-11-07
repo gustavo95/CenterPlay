@@ -29,8 +29,8 @@ Item {
 
             Button {
                 id: button1
-                KeyNavigation.left: button1
-                KeyNavigation.right: button2
+                KeyNavigation.down: button1
+                KeyNavigation.up: button2
                 width: icon_size
                 height: icon_size
                 text: qsTr("")
@@ -65,8 +65,8 @@ Item {
 
                 Button {
                     id: button2
-                    KeyNavigation.left: button1
-                    KeyNavigation.right: button3
+                    KeyNavigation.down: button1
+                    KeyNavigation.up: button3
                     width: icon_size
                     height: icon_size
                     text: qsTr("")
@@ -102,8 +102,8 @@ Item {
 
                 Button {
                     id: button3
-                    KeyNavigation.left: button2
-                    KeyNavigation.right: button4
+                    KeyNavigation.down: button2
+                    KeyNavigation.up: button4
                     width: icon_size
                     height: icon_size
                     text: qsTr("")
@@ -139,8 +139,8 @@ Item {
 
                 Button {
                     id: button4
-                    KeyNavigation.left: button3
-                    KeyNavigation.right: button4
+                    KeyNavigation.down: button3
+                    KeyNavigation.up: button4
                     width: icon_size
                     height: icon_size
                     text: ""

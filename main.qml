@@ -23,10 +23,10 @@ ApplicationWindow {
         id: gamepadKeyNavigation
         gamepad: gamepad1
         active: true
-        buttonAKey: Qt.Key_Space //X
-        buttonBKey: Qt.Key_B //O
-        buttonXKey: Qt.Key_X //Triangulo
-        buttonYKey: Qt.Key_Y //Quadrado
+        buttonAKey: Qt.Key_Space //X            //RPi3 - Quadrado
+        buttonBKey: Qt.Key_Space //O            //RPi3 - X
+        buttonXKey: Qt.Key_B     //Triangulo
+        buttonYKey: Qt.Key_B     //Quadrado
         buttonL1Key: Qt.Key_L //L1
         buttonR1Key: Qt.Key_R //R1
         rightKey: Qt.Key_Up //->

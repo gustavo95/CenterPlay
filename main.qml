@@ -1,5 +1,5 @@
 import QtQuick 2.7
-import QtQuick.Controls 2.0
+import QtQuick.Controls 2.1
 import QtQuick.Layouts 1.0
 import QtGamepad 1.0
 
@@ -35,6 +35,7 @@ ApplicationWindow {
         id: swipeView
         anchors.fill: parent
         focus: true
+        interactive: false
         currentIndex: 0
 
         PageMain {

@@ -13,6 +13,9 @@ public:
     explicit TetrixLauncher(QObject *parent = 0);
     Q_INVOKABLE void launchTetrix();
 
+private:
+    QProcess *m_process;
+
 };
 
 #endif

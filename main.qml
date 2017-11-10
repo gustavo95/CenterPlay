@@ -25,8 +25,8 @@ ApplicationWindow {
         active: true
         buttonAKey: Qt.Key_Space //X            //RPi3 - Quadrado
         buttonBKey: Qt.Key_Space //O            //RPi3 - X
-        buttonXKey: Qt.Key_B     //Triangulo
-        buttonYKey: Qt.Key_B     //Quadrado
+        buttonXKey: Qt.Key_B     //Triangulo    //RPi3 - Triangulo
+        buttonYKey: Qt.Key_B     //Quadrado     //RPi3 - L1
         buttonL1Key: Qt.Key_L //L1
         buttonR1Key: Qt.Key_R //R1
         rightKey: Qt.Key_Up //->

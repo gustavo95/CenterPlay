@@ -9,15 +9,6 @@ PageGameForm {
         console.log("Button \"Game1\" clicked.");
         tetrixLauncher.launchTetrix();
     }
-    button2.onClicked: {
-        console.log("Button \"Game2\" clicked.");
-    }
-    button3.onClicked: {
-        console.log("Button \"Game3\" clicked.");
-    }
-    button4.onClicked: {
-        console.log("Button \"Game4\" clicked.");
-    }
     text1 {
         id: textDate
         color: "black"

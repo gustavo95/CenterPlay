@@ -11,15 +11,11 @@
         <file>PagePictureForm.ui.qml</file>
         <file>PageGame.qml</file>
         <file>PageGameForm.ui.qml</file>
-        <file>img/bf4.png</file>
-        <file>img/fo.png</file>
         <file>img/game_icon.png</file>
         <file>img/image_icon.png</file>
         <file>img/music_icon.png</file>
         <file>img/netflix.png</file>
         <file>img/power_icon.png</file>
-        <file>img/saw.ico</file>
-        <file>img/sonic.png</file>
         <file>img/spotify.png</file>
         <file>img/usb_orange.png</file>
         <file>img/video_icon.png</file>
@@ -28,5 +24,6 @@
         <file>img/usb_red.png</file>
         <file>img/usb_green.png</file>
         <file>img/usb_indigo.png</file>
+        <file>img/tetris.png</file>
     </qresource>
 </RCC>

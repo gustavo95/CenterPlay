@@ -5,9 +5,6 @@ import QtQuick.Layouts 1.0
 Item {
     id: root
     property alias button1: button1
-    property alias button2: button2
-    property alias button3: button3
-    property alias button4: button4
     property alias text1: text1
     width: resWidth
     height: resHeight
@@ -19,9 +16,8 @@ Item {
         id: rowlayout
         x: root.width / 2 - rowlayout.width / 2
         y: root.height / 2 - rowlayout.height / 2
-        width: 4 * (icon_size + spacing_size)
+        width: (icon_size)
         height: icon_size
-        spacing: spacing_size
         opacity: 1
 
         ColumnLayout {
@@ -30,7 +26,7 @@ Item {
             Button {
                 id: button1
                 KeyNavigation.down: button1
-                KeyNavigation.up: button2
+                KeyNavigation.up: button1
                 width: icon_size
                 height: icon_size
                 text: qsTr("")
@@ -50,7 +46,7 @@ Item {
                 Image {
                     id: image1
                     anchors.fill: parent
-                    source: "img/fo.png"
+                    source: "img/tetris.png"
                 }
             }
             Text {
@@ -59,118 +55,7 @@ Item {
                 font.pixelSize: fontSize * root.width / root.height
             }
         }
-
-        ColumnLayout {
-            id: columnLayout2
-
-                Button {
-                    id: button2
-                    KeyNavigation.down: button1
-                    KeyNavigation.up: button3
-                    width: icon_size
-                    height: icon_size
-                    text: qsTr("")
-                    Layout.fillHeight: false
-                    Layout.fillWidth: false
-
-                    background: Rectangle {
-                        implicitWidth: icon_size
-                        implicitHeight: icon_size
-                        opacity: enabled ? 1 : 0.3
-                        border.color: button2.focus ? "#59f" : "#fff"
-                        color: button2.pressed ? "#cef" : "#fff"
-                        border.width: 2
-                        radius: 2
-                    }
-
-                    Image {
-                        id: image2
-                        anchors.fill: parent
-                        source: "img/bf4.png"
-                    }
-                }
-
-                Text {
-                    id: button2Text
-                    text: button2.focus ? qsTr("Game 2") : qsTr("")
-                    font.pixelSize: fontSize * root.width / root.height
-                }
-            }
-
-            ColumnLayout {
-                id: columnLayout3
-
-                Button {
-                    id: button3
-                    KeyNavigation.down: button2
-                    KeyNavigation.up: button4
-                    width: icon_size
-                    height: icon_size
-                    text: qsTr("")
-                    Layout.fillHeight: false
-                    Layout.fillWidth: false
-
-                    background: Rectangle {
-                        implicitWidth: icon_size
-                        implicitHeight: icon_size
-                        opacity: enabled ? 1 : 0.3
-                        border.color: button3.focus ? "#59f" : "#fff"
-                        color: button3.pressed ? "#cef" : "#fff"
-                        border.width: 2
-                        radius: 2
-                    }
-
-                    Image {
-                        id: image3
-                        anchors.fill: parent
-                        source: "img/sonic.png"
-                    }
-                }
-
-                Text {
-                    id: button3Text
-                    text: button3.focus ? qsTr("Game 3") : qsTr("")
-                    font.pixelSize: fontSize * root.width / root.height
-                }
-            }
-
-            ColumnLayout {
-                id: columnLayout4
-
-                Button {
-                    id: button4
-                    KeyNavigation.down: button3
-                    KeyNavigation.up: button4
-                    width: icon_size
-                    height: icon_size
-                    text: ""
-                    Layout.fillHeight: false
-                    Layout.fillWidth: false
-
-                    background: Rectangle {
-                        implicitWidth: icon_size
-                        implicitHeight: icon_size
-                        opacity: enabled ? 1 : 0.3
-                        border.color: button4.focus ? "#59f" : "#fff"
-                        color: button4.pressed ? "#cef" : "#fff"
-                        border.width: 2
-                        radius: 2
-                    }
-
-                    Image {
-                        id: image
-                        anchors.fill: parent
-                        source: "img/saw.ico"
-                    }
-                }
-
-                Text {
-                    id: button4Text
-                    text: button4.focus ? qsTr("Game 4") : qsTr("")
-                    font.pixelSize: fontSize * root.width / root.height
-                }
-            }
-        }
+    }
 
         Text {
             id: title

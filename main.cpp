@@ -2,6 +2,7 @@
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
 #include "scriptlauncher.h"
+#include "tetrixlauncher.h"
 
 int main(int argc, char *argv[])
 {
@@ -14,9 +15,11 @@ int main(int argc, char *argv[])
     engine.rootContext()->setContextProperty("fontSize", 11);
     engine.load(QUrl(QLatin1String("qrc:/main.qml")));
 
-    ScriptLauncher launcher;
+    ScriptLauncher slauncher;
+    TetrixLauncher tlauncher;
     QQmlContext *context = engine.rootContext();
-    context->setContextProperty("scriptLauncher", &launcher);
+    context->setContextProperty("scriptLauncher", &slauncher);
+    context->setContextProperty("tetrixLauncher", &tlauncher);
     
     return app.exec();
 }

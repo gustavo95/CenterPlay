@@ -55,7 +55,7 @@ Item {
             }
             Text {
                 id: button1Text
-                text: button1.focus ? qsTr("Game 1") : qsTr("")
+                text: button1.focus ? qsTr("Tetrix") : qsTr("")
                 font.pixelSize: fontSize * root.width / root.height
             }
         }

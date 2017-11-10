@@ -7,6 +7,7 @@ PageGameForm {
 
     button1.onClicked: {
         console.log("Button \"Game1\" clicked.");
+        tetrixLauncher.launchTetrix()
     }
     button2.onClicked: {
         console.log("Button \"Game2\" clicked.");

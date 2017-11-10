@@ -1,9 +1,11 @@
 QT += qml quick
+QT += widgets
 
 CONFIG += c++11
 
 SOURCES += main.cpp \
-    scriptlauncher.cpp
+    scriptlauncher.cpp \
+    tetrixlauncher.cpp
 
 RESOURCES += qml.qrc
 
@@ -16,4 +18,5 @@ include(deployment.pri)
 DISTFILES +=
 
 HEADERS += \
-    scriptlauncher.h
+    scriptlauncher.h \
+    tetrixlauncher.h

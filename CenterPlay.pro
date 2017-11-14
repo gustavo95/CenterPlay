@@ -1,5 +1,10 @@
 QT += qml quick
 QT += widgets
+QT  += core gui
+QT += qml quick webview
+QT += webengine svg
+QTPLUGIN += qtvirtualkeyboardplugin
+
 
 CONFIG += c++11
 

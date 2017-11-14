@@ -1,8 +1,19 @@
 import QtQuick 2.4
 
 PagePictureForm {
+    id: root
     button1.onClicked: {
-        console.log("Button \"Image\" clicked.");
+        console.log("Button \"picture\" clicked.");
+        var component = Qt.createComponent("qrc:/FolderPicture.qml")
+        if (component.status !== Component.Ready){
+            if(component.status === Component.Error){
+                console.debug("Error:" + component.errorString())
+            }
+
+        }
+        var window    = component.createObject(root)
+
+
     }
     text1 {
         id: textDate

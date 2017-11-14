@@ -1,14 +1,36 @@
 import QtQuick 2.0
+import QtQuick 2.2
+import QtQuick.Controls 1.1
+import QtQuick.Layouts 1.1
+import QtQuick.Controls.Styles 1.2
+
+import QtQuick 2.0
+import QtQuick.Window 2.0
+import QtWebEngine 1.3
+
 
 PageMusicForm {
+    id: root
     button1.onClicked: {
-        console.log("Button \"Music1\" clicked.");
+        console.log("Button \"Spotify\" clicked.");
+        var component = Qt.createComponent("qrc:/PageSpotify.qml")
+        var window    = component.createObject(root)
+        //window.show()
+
+
+        //window.showFullScreen()
     }
     button2.onClicked: {
-        console.log("Button \"Music2\" clicked.");
+        console.log("Button \"Deezer\" clicked.");
+        var component = Qt.createComponent("qrc:/PageDeezer.qml")
+        var window    = component.createObject(root)
+        //window.show()
     }
     button3.onClicked: {
-        console.log("Button \"Music3\" clicked.");
+        console.log("Button \"SDCARD\" clicked.");
+        var component = Qt.createComponent("qrc:/FolderMusic.qml")
+        var window    = component.createObject(root)
+
     }
     text1 {
         id: textDate

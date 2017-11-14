@@ -25,5 +25,14 @@
         <file>img/usb_green.png</file>
         <file>img/usb_indigo.png</file>
         <file>img/tetris.png</file>
+        <file>FolderMusic.qml</file>
+        <file>FolderPicture.qml</file>
+        <file>FolderVideo.qml</file>
+        <file>PageDeezer.qml</file>
+        <file>PageNetflix.qml</file>
+        <file>PageSpotify.qml</file>
+        <file>PageYoutube.qml</file>
+        <file>Picture.qml</file>
+        <file>Player.qml</file>
     </qresource>
 </RCC>

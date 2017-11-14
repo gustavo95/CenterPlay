@@ -1,11 +1,17 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include <QQmlContext>
+#include <QtCore/QUrl>
+#include <QtWebView/QtWebView>
+#include <qtwebengineglobal.h>
+#include <QWebEngineCookieStore>
+
 #include "scriptlauncher.h"
 #include "tetrixlauncher.h"
 
 int main(int argc, char *argv[])
 {
+    qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
     

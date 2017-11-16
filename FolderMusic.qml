@@ -14,7 +14,7 @@ FileDialog {
     onAccepted: {
        musicSource= fileDialog.fileUrl;
         console.log("You chose: " + musicSource)
-
+            mainroot.currentwindow = "other"
         var component = Qt.createComponent("qrc:/Player.qml")
         if (component.status != Component.Ready){
             if(component.status == Component.Error){

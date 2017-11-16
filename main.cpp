@@ -14,7 +14,7 @@ int main(int argc, char *argv[])
     qputenv("QT_IM_MODULE", QByteArray("qtvirtualkeyboard"));
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
     QGuiApplication app(argc, argv);
-    
+    QtWebEngine::initialize();
     QQmlApplicationEngine engine;
     engine.rootContext()->setContextProperty("resWidth", 640);
     engine.rootContext()->setContextProperty("resHeight", 480);

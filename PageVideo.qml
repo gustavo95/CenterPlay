@@ -1,16 +1,15 @@
 import QtQuick 2.4
 import QtQuick.Dialogs 1.2
 
-//https://doc.qt.io/qt-5/qtwebengine-webengine-minimal-example.html
 
 
 PageVideoForm {
-    id: root
+    id: mediaroot
     visible: true
     enabled: true
-
     button1.onClicked: {
         console.log("Button \"Netflix\" clicked.");
+
         var component = Qt.createComponent("qrc:/PageNetflix.qml")
         if (component.status !== Component.Ready){
             if(component.status === Component.Error){
@@ -18,16 +17,27 @@ PageVideoForm {
             }
 
         }
-
-        var window    = component.createObject(root)
-        if (window == null){
-            console.log("Nao foi")
-
-        }
         else{
-             //window.show()
-            console.log("foi")
+
+             var window    = component.createObject(mediaroot)
+
+            if (window == null){
+                console.log("Nao foi")
+
+            }
+            else{
+
+               // mainroot.currentwindow = "other"
+
+                 //window.show()
+                console.log("foi")
+
+            }
+
         }
+
+
+
 
 
     }
@@ -40,8 +50,8 @@ PageVideoForm {
             }
 
         }
-        var window    = component.createObject(root)
-        //window.show()
+        var window    = component.createObject(mediaroot)
+         mainroot.currentwindow = "other"
     }
     button3.onClicked: {
 
@@ -52,8 +62,8 @@ PageVideoForm {
             }
 
         }
-       var window    = component.createObject(root)
-
+        mainroot.currentwindow = "other"
+       var window    = component.createObject(mediaroot)
 
     }
     text1 {

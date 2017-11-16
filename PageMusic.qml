@@ -15,8 +15,7 @@ PageMusicForm {
         console.log("Button \"Spotify\" clicked.");
         var component = Qt.createComponent("qrc:/PageSpotify.qml")
         var window    = component.createObject(root)
-        //window.show()
-
+         mainroot.currentwindow = "other"
 
         //window.showFullScreen()
     }
@@ -24,12 +23,14 @@ PageMusicForm {
         console.log("Button \"Deezer\" clicked.");
         var component = Qt.createComponent("qrc:/PageDeezer.qml")
         var window    = component.createObject(root)
+         mainroot.currentwindow = "other"
         //window.show()
     }
     button3.onClicked: {
         console.log("Button \"SDCARD\" clicked.");
         var component = Qt.createComponent("qrc:/FolderMusic.qml")
         var window    = component.createObject(root)
+
 
     }
     text1 {

@@ -4,6 +4,8 @@ Rectangle{
 
     id: picture
     anchors.fill: parent
+    focus: true
+
      property string folder
 
     Image {

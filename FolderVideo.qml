@@ -15,15 +15,31 @@ FileDialog {
     onAccepted: {
         videoSource= fileDialog.fileUrl;
         console.log("You chose: " + videoSource)
-
+        mainroot.currentwindow = "other"
+        console.log(currentwindow)
         var component = Qt.createComponent("qrc:/Player.qml")
-        var window    = component.createObject(root, {'folder':videoSource})
+        var window    = component.createObject(mediaroot, {'folder':videoSource})
 
-        //Qt.quit()
     }
     onRejected: {
-        console.log("Canceled")
-        //Qt.quit()
+
+        console.log("foi")
+
+    }
+    Keys.onReleased: {
+        console.log(event.key)
+
+    }
+    MouseArea {
+        anchors.fill: parent
+        onPressed: {
+            console.log("press "+mouse.source)
+             console.log("press "+mouse.modifiers)
+        }
+        onClicked: {
+            console.log("clicked "+mouse.modifiers)
+             console.log("clicked "+mouse.source)
+        }
     }
 
 

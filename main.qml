@@ -4,6 +4,8 @@ import QtQuick.Layouts 1.0
 import QtGamepad 1.0
 
 ApplicationWindow {
+    id: mainroot
+    property string currentwindow: "main"
     visible: true
     width: resWidth
     height: resHeight
@@ -13,6 +15,7 @@ ApplicationWindow {
         id: gamepad1
         deviceId: GamepadManager.connectedGamepads.length > 0 ? GamepadManager.connectedGamepads[0] : -1
     }
+
 
     Connections {
         target: GamepadManager
@@ -43,6 +46,7 @@ ApplicationWindow {
 
         PageMain {
             visible: true
+
         }
 
         PageVideo{
@@ -62,6 +66,10 @@ ApplicationWindow {
         }
 
         Keys.onReleased: {
+
+            if(mainroot.currentwindow !== "main")
+                return;
+
             if (event.key === Qt.Key_R) {
                 swipeView.currentIndex = swipeView.currentIndex + 1;
                 if(swipeView.currentIndex > 4){

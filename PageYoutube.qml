@@ -25,6 +25,7 @@ Rectangle{
         }
         else if (event.key === Qt.Key_B) {
             root.visible = !root.visible;
+             mainroot.currentwindow = "main"
         }
     }
     InputPanel {

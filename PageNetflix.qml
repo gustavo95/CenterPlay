@@ -3,15 +3,21 @@ import QtQuick.Window 2.0
 import QtWebEngine 1.3
 import QtQuick.VirtualKeyboard 1.3
 import QtQuick.Controls 2.0
+
 Rectangle{
     id: root
+
     anchors.fill: parent
+     visible: true
+     enabled: true
     WebEngineView {
 
         visible: true
+        focus: visible
         anchors.fill: parent
         url: "https://www.netflix.com/browse"
     }
+
 
     Keys.onReleased: {
         if (event.key === Qt.Key_S) {
@@ -19,8 +25,15 @@ Rectangle{
 
         }
         else if (event.key === Qt.Key_B) {
-            root.visible = !root.visible;
+             root.visible = !root.visible
+            mainroot.currentwindow = "main"
+
+
         }
+
+
+
+
     }
 
     InputPanel {

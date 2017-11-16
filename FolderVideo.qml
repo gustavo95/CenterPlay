@@ -11,7 +11,7 @@ FileDialog {
     width: resWidth
     height: resHeight
     title: "Open your video"
-    folder: "file:///home/"
+    folder: "file:///media/usb/"
     onAccepted: {
         videoSource= fileDialog.fileUrl;
         console.log("You chose: " + videoSource)
@@ -26,21 +26,8 @@ FileDialog {
         console.log("foi")
 
     }
-    Keys.onReleased: {
-        console.log(event.key)
 
-    }
-    MouseArea {
-        anchors.fill: parent
-        onPressed: {
-            console.log("press "+mouse.source)
-             console.log("press "+mouse.modifiers)
-        }
-        onClicked: {
-            console.log("clicked "+mouse.modifiers)
-             console.log("clicked "+mouse.source)
-        }
-    }
+
 
 
     Component.onCompleted: visible = true

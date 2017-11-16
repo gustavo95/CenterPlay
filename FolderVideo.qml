@@ -21,7 +21,9 @@ FileDialog {
         var window    = component.createObject(mediaroot, {'folder':videoSource})
 
     }
+
     onRejected: {
+        mainroot.currentwindow = "main"
 
         console.log("foi")
 

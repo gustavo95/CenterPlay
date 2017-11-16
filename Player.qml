@@ -14,12 +14,14 @@ Rectangle{
 
     MediaPlayer {
         id: player
-
         autoPlay: true
         source: folder
     }
 
     VideoOutput {
+
+
+
         focus: visible
         visible: true
         width: resWidth

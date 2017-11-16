@@ -27,6 +27,7 @@ FileDialog {
         //Qt.quit()
     }
     onRejected: {
+        mainroot.currentwindow = "main"
         console.log("Canceled")
         //Qt.quit()
     }

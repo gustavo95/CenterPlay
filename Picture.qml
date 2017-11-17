@@ -1,37 +1,29 @@
 import QtQuick 2.7
 import QtQuick.Controls 2.0
-Rectangle{
 
+Rectangle{
     id: picture
     anchors.fill: parent
     focus: true
 
-     property string folder
+    property string folder
 
     Image {
-
         width: resWidth
         height: resHeight
         fillMode: Image.Stretch
         horizontalAlignment: Image.AlignLeft
         verticalAlignment: Image.AlignTop
-
         source: folder
     }
-    Button{
 
+    Button{
         text: "fechar"
         onClicked: {
-
-
-           // video.enabled = false
+            //video.enabled = false
             picture.visible = false
-//            var component = Qt.createComponent("PageVideo.qml")
-//            var window    = component.createObject(video)
-
-
-
+            //var component = Qt.createComponent("PageVideo.qml")
+            //var window    = component.createObject(video)
         }
-
     }
 }

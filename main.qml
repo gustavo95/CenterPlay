@@ -71,7 +71,7 @@ ApplicationWindow {
             if(mainroot.currentwindow !== "main")
                 return;
 
-            if (event.key === Qt.Key_R) {
+            else if (event.key === Qt.Key_R) {
                 swipeView.currentIndex = swipeView.currentIndex + 1;
                 if(swipeView.currentIndex > 4){
                     swipeView.currentIndex = 4;

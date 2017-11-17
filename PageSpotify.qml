@@ -12,6 +12,7 @@ Rectangle{
     WebEngineView {
         id: spot
         visible: true
+        focus: visible
         anchors.fill: parent
         url: "https://open.spotify.com/browse"
         settings.pluginsEnabled : true

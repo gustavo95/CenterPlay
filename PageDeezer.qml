@@ -13,6 +13,7 @@ Rectangle{
         id: spot
         visible: true
         anchors.fill: parent
+        focus: visible
         url: "https://www.deezer.com/br/"
         settings.pluginsEnabled : true
     }

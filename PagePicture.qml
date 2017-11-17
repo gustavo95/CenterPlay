@@ -1,7 +1,10 @@
 import QtQuick 2.4
 
 PagePictureForm {
-    id: root
+    id: pictureroot
+    visible: true
+    enabled: true
+
     button1.onClicked: {
         console.log("Button \"picture\" clicked.");
         var component = Qt.createComponent("qrc:/FolderPicture.qml")
@@ -11,7 +14,9 @@ PagePictureForm {
             }
 
         }
-        var window    = component.createObject(root)
+        var window    = component.createObject(pictureroot)
+        mainroot.currentwindow = "other"
+
 
 
     }

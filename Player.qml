@@ -1,5 +1,5 @@
 import QtMultimedia 5.0
-import QtQuick 2.2
+import QtQuick 2.7
 import QtQuick.Window 2.0
 import QtQuick.Controls 2.0
 
@@ -9,6 +9,17 @@ Rectangle{
     focus: true
     visible: true
     property string folder
+    Image {
+        id: image
+        anchors.fill: parent
+        visible: true
+        fillMode: Image.PreserveAspectFit
+        horizontalAlignment: Image.AlignHCenter
+        verticalAlignment: Image.AlignVCenter
+        source: "img/music.png"
+
+
+    }
 
     MouseArea{
         anchors.fill: parent
@@ -18,6 +29,7 @@ Rectangle{
         id: player
         autoPlay: true
         source: folder
+
     }
 
     VideoOutput {
@@ -27,7 +39,11 @@ Rectangle{
         height: resHeight
         anchors.fill: parent
         source: player
+
     }
+
+
+
 
     Keys.onReleased: {
         console.log("Pressionou")
@@ -44,5 +60,11 @@ Rectangle{
             }
             var window    = component.createObject(video)
         }
+
+
     }
+    function isMusic(){
+
+    }
+
 }

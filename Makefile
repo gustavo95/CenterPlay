@@ -222,6 +222,7 @@ DIST          = /home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/spec_pre.prf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/qt_config.prf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/toolchain.prf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/default_pre.prf \
@@ -417,6 +418,7 @@ Makefile: CenterPlay.pro /home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/linux-g++/qmake.
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/qt_config.prf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/linux-g++/qmake.conf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/exclusive_builds.prf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/toolchain.prf \
 		/home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/default_pre.prf \
@@ -612,6 +614,7 @@ Makefile: CenterPlay.pro /home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/linux-g++/qmake.
 /home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/qt_config.prf:
 /home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/linux-g++/qmake.conf:
 /home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/spec_post.prf:
+.qmake.stash:
 /home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/exclusive_builds.prf:
 /home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/toolchain.prf:
 /home/cesar/Qt5.9.0/5.9/gcc_64/mkspecs/features/default_pre.prf:
@@ -718,6 +721,7 @@ qrc_qml.cpp: qml.qrc \
 		img/power_icon.png \
 		img/usb_red.png \
 		img/usb_indigo.png \
+		img/music.png \
 		img/video_icon.png \
 		img/usb_orange.png \
 		img/netflix.png \

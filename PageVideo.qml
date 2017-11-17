@@ -17,25 +17,10 @@ PageVideoForm {
             }
 
         }
-        else{
 
-             var window    = component.createObject(mediaroot)
-
-            if (window == null){
-                console.log("Nao foi")
-
-            }
-            else{
-
-               // mainroot.currentwindow = "other"
-
-                 //window.show()
-                console.log("foi")
-
-            }
-
-        }
-
+        var window    = component.createObject(mediaroot)
+        mainroot.currentwindow = "other"
+        console.log("foi")
 
 
 
@@ -51,11 +36,11 @@ PageVideoForm {
 
         }
         var window    = component.createObject(mediaroot)
-         mainroot.currentwindow = "other"
+        mainroot.currentwindow = "other"
     }
     button3.onClicked: {
 
-       var component = Qt.createComponent("qrc:/FolderVideo.qml")
+        var component = Qt.createComponent("qrc:/FolderVideo.qml")
         if (component.status != Component.Ready){
             if(component.status == Component.Error){
                 console.debug("Error:" + component.errorString())
@@ -63,7 +48,7 @@ PageVideoForm {
 
         }
         mainroot.currentwindow = "other"
-       var window    = component.createObject(mediaroot)
+        var window    = component.createObject(mediaroot)
 
     }
     text1 {

@@ -16,22 +16,16 @@ FileDialog {
         pictureSource= fileDialog.fileUrl;
         console.log("You chose: " + pictureSource)
         mainroot.currentwindow = "other"
-
         var component = Qt.createComponent("qrc:/Picture.qml")
-        if (component.status !== Component.Ready){
-            if(component.status === Component.Error){
-                console.debug("Error:" + component.errorString())
-            }
-        }
-        var window    = component.createObject(root, {'folder':pictureSource})
+        var window    = component.createObject(pictureroot, {'folder':pictureSource})
 
-        //Qt.quit()
     }
 
     onRejected: {
         mainroot.currentwindow = "main"
         console.log("Canceled")
-        //Qt.quit()
+        var component = Qt.createComponent("qrc:/PagePicture.qml")
+        var window    = component.createObject(picture)
     }
 
     Component.onCompleted: visible = true

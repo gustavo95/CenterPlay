@@ -13,6 +13,7 @@ Rectangle{
         id: spot
         visible: true
         anchors.fill: parent
+        focus: visible
         url: "https://www.youtube.com/"
         settings.pluginsEnabled : true
     }

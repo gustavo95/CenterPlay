@@ -9,11 +9,12 @@ FileDialog {
 
     width: resWidth
     height: resHeight
-    title: "Open your song"
+    title: "Open your Picture"
     folder: "file:///media/usb/"
     onAccepted: {
        pictureSource= fileDialog.fileUrl;
         console.log("You chose: " + pictureSource)
+        mainroot.currentwindow = "other"
 
         var component = Qt.createComponent("qrc:/Picture.qml")
         if (component.status != Component.Ready){

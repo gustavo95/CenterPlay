@@ -4,9 +4,10 @@ Rectangle{
 
     id: picture
     anchors.fill: parent
-    focus: true
+    focus: visible
+    visible: true
 
-     property string folder
+    property string folder
 
     Image {
 
@@ -18,20 +19,18 @@ Rectangle{
 
         source: folder
     }
-    Button{
 
-        text: "fechar"
-        onClicked: {
+    Keys.onReleased: {
+        console.log("Pressionou")
+        if (event.key === Qt.Key_B) {
 
+           picture.visible = false
+            mainroot.currentwindow = "main"
 
-           // video.enabled = false
-            picture.visible = false
-//            var component = Qt.createComponent("PageVideo.qml")
-//            var window    = component.createObject(video)
-
+            var component = Qt.createComponent("qrc:/PagePicture.qml")
+            var window    = component.createObject(picture)
 
 
         }
-
     }
 }

@@ -25,12 +25,9 @@ FileDialog {
     onRejected: {
         mainroot.currentwindow = "main"
 
-        console.log("foi")
+        console.log("rejected")
 
     }
-
-
-
 
     Component.onCompleted: visible = true
 

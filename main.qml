@@ -36,6 +36,7 @@ ApplicationWindow {
         leftKey: Qt.Key_Down
         upKey: Qt.Key_U
         downKey: Qt.Key_D
+        buttonGuideKey: Qt.Key_G
     }
 
     SwipeView {

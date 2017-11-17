@@ -37,6 +37,12 @@ ApplicationWindow {
         upKey: Qt.Key_U
         downKey: Qt.Key_D
         buttonGuideKey: Qt.Key_G
+        buttonL2Key: Qt.Key_Q
+        buttonL3Key: Qt.Key_W
+        buttonR2Key: Qt.Key_E
+        buttonR3Key: Qt.Key_T
+        buttonSelectKey: Qt.Key_I
+        buttonStartKey: Qt.Key_O
     }
 
     SwipeView {

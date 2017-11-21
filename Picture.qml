@@ -27,13 +27,12 @@ Rectangle{
     Keys.onReleased: {
         console.log("Pressionou")
         if (event.key === Qt.Key_B) {
-
             picture.visible = false
             image.visible=false
             mainroot.currentwindow = "main"
 
-            var component = Qt.createComponent("qrc:/PagePicture.qml")
-            var window    = component.createObject(picture)
+            //var component = Qt.createComponent("qrc:/PagePicture.qml")
+            //var window    = component.createObject(picture)
 
         }
     }

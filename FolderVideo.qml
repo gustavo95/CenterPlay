@@ -21,16 +21,13 @@ FileDialog {
 
         videoLauncher.launchVideo(videoSource);
 
-        var component = Qt.createComponent("qrc:/PageVideo.qml")
-        var window    = component.createObject(mediaroot)
+        //var component = Qt.createComponent("qrc:/PageVideo.qml")
+        //var window    = component.createObject(mediaroot)
     }
 
     onRejected: {
         mainroot.currentwindow = "main"
-
         console.log("rejected")
-
-
     }
 
     Component.onCompleted: visible = true

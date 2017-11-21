@@ -6,7 +6,6 @@ import QtMultimedia 5.0
 
 FileDialog {
     id: fileDialog
-    visible: true
     property string videoSource: ""
     width: resWidth
     height: resHeight

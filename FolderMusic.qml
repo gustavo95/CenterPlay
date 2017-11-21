@@ -27,6 +27,9 @@ FileDialog {
         //Qt.quit()
 
         videoLauncher.launchVideo(musicSource);
+
+        var component = Qt.createComponent("qrc:/PageMusic.qml")
+        var window    = component.createObject(root)
     }
 
     onRejected: {

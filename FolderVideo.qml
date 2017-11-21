@@ -21,8 +21,8 @@ FileDialog {
 
         videoLauncher.launchVideo(videoSource);
 
-        //var component = Qt.createComponent("qrc:/Player.qml")
-        //var window    = component.createObject(mediaroot, {'folder':videoSource})
+        var component = Qt.createComponent("qrc:/PageVideo.qml")
+        var window    = component.createObject(mediaroot)
     }
 
     onRejected: {

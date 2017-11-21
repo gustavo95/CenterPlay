@@ -24,8 +24,8 @@ FileDialog {
     onRejected: {
         mainroot.currentwindow = "main"
         console.log("Canceled")
-        var component = Qt.createComponent("qrc:/PagePicture.qml")
-        var window    = component.createObject(picture)
+        //var component = Qt.createComponent("qrc:/PagePicture.qml")
+        //var window    = component.createObject(picture)
     }
 
     Component.onCompleted: visible = true

@@ -30,8 +30,6 @@ PageMusicForm {
         console.log("Button \"SDCARD\" clicked.");
         var component = Qt.createComponent("qrc:/FolderMusic.qml")
         var window    = component.createObject(root)
-
-
     }
     text1 {
         id: textDate

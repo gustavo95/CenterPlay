@@ -5,8 +5,6 @@ import QtQuick.Dialogs 1.2
 
 PageVideoForm {
     id: mediaroot
-    visible: true
-    enabled: true
     button1.onClicked: {
         console.log("Button \"Netflix\" clicked.");
 
@@ -29,8 +27,8 @@ PageVideoForm {
     button2.onClicked: {
         console.log("Button \"Youtube\" clicked.");
         var component = Qt.createComponent("qrc:PageYoutube.qml")
-        if (component.status != Component.Ready){
-            if(component.status == Component.Error){
+        if (component.status !== Component.Ready){
+            if(component.status === Component.Error){
                 console.debug("Error:" + component.errorString())
             }
 
@@ -41,14 +39,7 @@ PageVideoForm {
     button3.onClicked: {
 
         var component = Qt.createComponent("qrc:/FolderVideo.qml")
-        if (component.status != Component.Ready){
-            if(component.status == Component.Error){
-                console.debug("Error:" + component.errorString())
-            }
-
-        }
         mainroot.currentwindow = "main"
-
         var window    = component.createObject(mediaroot)
 
     }

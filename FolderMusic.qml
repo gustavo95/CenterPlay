@@ -15,16 +15,18 @@ FileDialog {
     onAccepted: {
         musicSource= fileDialog.fileUrl;
         console.log("You chose: " + musicSource)
-        mainroot.currentwindow = "other"
-        var component = Qt.createComponent("qrc:/Player.qml")
-        if (component.status !== Component.Ready){
-            if(component.status === Component.Error){
-                console.debug("Error:" + component.errorString())
-            }
-        }
-        var window = component.createObject(root, {'folder':musicSource})
+       mainroot.currentwindow = "main"
+//        var component = Qt.createComponent("qrc:/Player.qml")
+//        if (component.status !== Component.Ready){
+//            if(component.status === Component.Error){
+//                console.debug("Error:" + component.errorString())
+//            }
+//        }
+//        var window = component.createObject(root, {'folder':musicSource})
 
         //Qt.quit()
+
+        videoLauncher.launchVideo(musicSource);
     }
 
     onRejected: {

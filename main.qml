@@ -10,6 +10,7 @@ ApplicationWindow {
     width: resWidth
     height: resHeight
     title: qsTr("Center Play")
+    //visible: false
 
     Gamepad {
         id: gamepad1
@@ -74,8 +75,11 @@ ApplicationWindow {
 
         Keys.onReleased: {
 
-            if(mainroot.currentwindow !== "main")
+            if(mainroot.currentwindow !== "main"){
+                //mainroot.visible = false
                 return;
+            }
+
 
             else if (event.key === Qt.Key_R) {
                 swipeView.currentIndex = swipeView.currentIndex + 1;

@@ -6,6 +6,7 @@ import QtMultimedia 5.0
 
 FileDialog {
     id: fileDialog
+    visible: true
     property string videoSource: ""
     width: resWidth
     height: resHeight
@@ -15,8 +16,9 @@ FileDialog {
     onAccepted: {
         videoSource= fileDialog.fileUrl;
         console.log("You chose: " + videoSource)
-        mainroot.currentwindow = "other"
+        //mainroot.currentwindow = "other"
         console.log(currentwindow)
+
         videoLauncher.launchVideo(videoSource);
 
         //var component = Qt.createComponent("qrc:/Player.qml")

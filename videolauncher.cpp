@@ -18,4 +18,5 @@ void VideoLauncher::launchVideo(QString folder)
 
     m_process->start("omxplayer --display=5 -o hdmi "+folder);
 
+
 }

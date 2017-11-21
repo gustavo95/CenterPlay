@@ -12,7 +12,7 @@ Rectangle{
     Image {
         id: image
         anchors.fill: parent
-        visible: true
+        visible: isMusic()
         fillMode: Image.PreserveAspectFit
         horizontalAlignment: Image.AlignHCenter
         verticalAlignment: Image.AlignVCenter
@@ -60,10 +60,23 @@ Rectangle{
             }
             var window    = component.createObject(video)
         }
+        if (event.key === Qt.Key_S){
+            player.pause()
+        }
+        if (event.key === Qt.Key_Space){
+            player.play()
+        }
+
+
 
 
     }
     function isMusic(){
+        var x = true
+        if (folder.search(".mp3")=== -1){
+            x = false
+        }
+        return x
 
     }
 

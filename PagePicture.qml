@@ -15,7 +15,7 @@ PagePictureForm {
 
         }
         var window    = component.createObject(pictureroot)
-        mainroot.currentwindow = "other"
+        mainroot.currentwindow = "main"
 
 
 

@@ -76,7 +76,7 @@ ApplicationWindow {
         Keys.onReleased: {
 
             if(mainroot.currentwindow !== "main"){
-                //mainroot.visible = false
+
                 return;
             }
 

@@ -19,7 +19,7 @@ PageVideoForm {
         }
 
         var window    = component.createObject(mediaroot)
-        mainroot.currentwindow = "main"
+        mainroot.currentwindow = "other"
         console.log("foi")
 
 
@@ -36,7 +36,7 @@ PageVideoForm {
 
         }
         var window    = component.createObject(mediaroot)
-        mainroot.currentwindow = "main"
+        mainroot.currentwindow = "other"
     }
     button3.onClicked: {
 

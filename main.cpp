@@ -8,6 +8,7 @@
 
 #include "scriptlauncher.h"
 #include "tetrixlauncher.h"
+#include "videolauncher.h"
 
 int main(int argc, char *argv[])
 {
@@ -23,9 +24,11 @@ int main(int argc, char *argv[])
 
     ScriptLauncher slauncher;
     TetrixLauncher tlauncher;
+    VideoLauncher vlauncher;
     QQmlContext *context = engine.rootContext();
     context->setContextProperty("scriptLauncher", &slauncher);
     context->setContextProperty("tetrixLauncher", &tlauncher);
+    context->setContextProperty("videoLauncher", &vlauncher);
     
     return app.exec();
 }

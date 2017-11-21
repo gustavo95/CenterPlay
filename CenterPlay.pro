@@ -10,7 +10,8 @@ CONFIG += c++11
 
 SOURCES += main.cpp \
     scriptlauncher.cpp \
-    tetrixlauncher.cpp
+    tetrixlauncher.cpp \
+    videolauncher.cpp
 
 RESOURCES += qml.qrc
 
@@ -24,4 +25,5 @@ DISTFILES +=
 
 HEADERS += \
     scriptlauncher.h \
-    tetrixlauncher.h
+    tetrixlauncher.h \
+    videolauncher.h

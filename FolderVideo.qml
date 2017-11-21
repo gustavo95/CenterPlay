@@ -17,8 +17,10 @@ FileDialog {
         console.log("You chose: " + videoSource)
         mainroot.currentwindow = "other"
         console.log(currentwindow)
-        var component = Qt.createComponent("qrc:/Player.qml")
-        var window    = component.createObject(mediaroot, {'folder':videoSource})
+        videoLauncher.launchVideo(videoSource);
+
+        //var component = Qt.createComponent("qrc:/Player.qml")
+        //var window    = component.createObject(mediaroot, {'folder':videoSource})
     }
 
     onRejected: {

@@ -30,11 +30,13 @@ FileDialog {
 
         //var component = Qt.createComponent("qrc:/PageMusic.qml")
         //var window    = component.createObject(root)
+        nextItemInFocusChain().forceActiveFocus();
     }
 
     onRejected: {
         mainroot.currentwindow = "main"
         console.log("Canceled")
+        nextItemInFocusChain().forceActiveFocus();
         //Qt.quit()
     }
 

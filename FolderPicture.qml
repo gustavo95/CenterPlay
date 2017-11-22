@@ -19,6 +19,7 @@ FileDialog {
         var component = Qt.createComponent("qrc:/Picture.qml")
         var window    = component.createObject(pictureroot, {'folder':pictureSource})
 
+        nextItemInFocusChain().forceActiveFocus();
     }
 
     onRejected: {
@@ -26,6 +27,7 @@ FileDialog {
         console.log("Canceled")
         //var component = Qt.createComponent("qrc:/PagePicture.qml")
         //var window    = component.createObject(picture)
+        nextItemInFocusChain().forceActiveFocus();
     }
 
     Component.onCompleted: visible = true

@@ -20,13 +20,13 @@ FileDialog {
 
         videoLauncher.launchVideo(videoSource);
 
-        //var component = Qt.createComponent("qrc:/PageVideo.qml")
-        //var window    = component.createObject(mediaroot)
+        nextItemInFocusChain().forceActiveFocus();
     }
 
     onRejected: {
         mainroot.currentwindow = "main"
         console.log("rejected")
+        nextItemInFocusChain().forceActiveFocus();
     }
 
     Component.onCompleted: visible = true

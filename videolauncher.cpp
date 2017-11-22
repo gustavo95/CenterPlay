@@ -16,7 +16,7 @@ void VideoLauncher::launchVideo(QString folder)
     folder.remove("file://");
     qDebug() << folder;
 
-    m_process->start("omxplayer --display=5 -o hdmi "+folder);
+    m_process->start("omxplayer --display=5 --layer 2 -o hdmi "+folder);
 
 
 }

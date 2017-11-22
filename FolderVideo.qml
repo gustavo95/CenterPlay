@@ -15,7 +15,6 @@ FileDialog {
     onAccepted: {
         videoSource= fileDialog.fileUrl;
         console.log("You chose: " + videoSource)
-        //mainroot.currentwindow = "other"
         console.log(currentwindow)
 
         videoLauncher.launchVideo(videoSource);

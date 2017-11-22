@@ -30,10 +30,7 @@ Rectangle{
             picture.visible = false
             image.visible=false
             mainroot.currentwindow = "main"
-
-            var component = Qt.createComponent("qrc:/PagePicture.qml")
-            var window    = component.createObject(picture)
-
+            nextItemInFocusChain().forceActiveFocus();
         }
     }
 }

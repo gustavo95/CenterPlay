@@ -18,7 +18,7 @@ FileDialog {
         mainroot.currentwindow = "other"
         var component = Qt.createComponent("qrc:/Picture.qml")
         var window    = component.createObject(pictureroot, {'folder':pictureSource})
-        nextItemInFocusChain().forceActiveFocus();
+        nextItemInFocusChain().nextItemInFocusChain().forceActiveFocus();
     }
 
     onRejected: {

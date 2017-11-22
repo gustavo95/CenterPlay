@@ -15,10 +15,9 @@ FileDialog {
     onAccepted: {
         pictureSource= fileDialog.fileUrl;
         console.log("You chose: " + pictureSource)
-        mainroot.currentwindow = "other"
+        mainroot.currentwindow = "main"
         var component = Qt.createComponent("qrc:/Picture.qml")
         var window    = component.createObject(pictureroot, {'folder':pictureSource})
-        nextItemInFocusChain().nextItemInFocusChain().forceActiveFocus();
     }
 
     onRejected: {
